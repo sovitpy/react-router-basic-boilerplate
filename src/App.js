@@ -1,15 +1,18 @@
 
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
-// import HomePage from './pages/HomePage';
-// import AboutPage from './pages/AboutPage';
 import Orange from './pages/Orange';
 import Red from './pages/Red';
-import Green from './pages/Green';
-import Purple from './pages/Purple';
 
 // Documentation for react router: https://reactrouter.com/en/v6.3.0/getting-started/installation
+/**
+ * - Create two new components Green and Purple. All you need to have in the component is the name of the component.
+ * - Refere Existing color components under src/public.
+ * - Once components are created import both Green and Purple components here.
+ */
+
+
+
 function App() {
   return (
     <div>
