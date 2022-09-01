@@ -1,8 +1,9 @@
-
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Orange from './pages/Orange';
 import Red from './pages/Red';
+import Green from './pages/Green';
+import Purple from './pages/Purple';
 
 // Documentation for react router: https://reactrouter.com/en/v6.3.0/getting-started/installation
 /**
@@ -11,8 +12,6 @@ import Red from './pages/Red';
  * - Once components are created import both Green and Purple components here.
  */
 
-
-
 function App() {
   return (
     <div>
@@ -20,27 +19,36 @@ function App() {
       <nav className="navbar navbar-default navbar-static-top">
         <ul class="nav nav-pills nav-fill">
           <li class="nav-item">
-            <Link className="nav-link" to="orange">Orange</Link>
+            <Link className="nav-link" to="orange">
+              Orange
+            </Link>
           </li>
           <li class="nav-item">
-            <Link className="nav-link" to="red">Red</Link>
+            <Link className="nav-link" to="red">
+              Red
+            </Link>
           </li>
-          { /**
-           *  Add Link tags for Red, Green and Purple. 
-           *  On click of these buttons should load respective components below 
-           */}
+          <li class="nav-item">
+            <Link className="nav-link" to="purple">
+              Purple
+            </Link>
+          </li>
+          <li class="nav-item">
+            <Link className="nav-link" to="green">
+              Green
+            </Link>
+          </li>
         </ul>
       </nav>
 
-      <div className='routes-wrapper'>
-        {/** 
-           * Add Router
-           *        Add invidual Route for Orange, Red, Green and Purple
-           * Note: Refer react documentation for examples on how to add Routes
-           * This is where your child components will load
-         */}
+      <div className="routes-wrapper">
+        <Routes>
+          <Route path="orange" element={<Orange />} />
+          <Route path="red" element={<Red />} />
+          <Route path="green" element={<Green />} />
+          <Route path="purple" element={<Purple />} />
+        </Routes>
       </div>
-
     </div>
   );
 }
